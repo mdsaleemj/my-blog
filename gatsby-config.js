@@ -2,9 +2,10 @@ module.exports = {
     siteMetadata : {
      title : "Happy Dev",
      author : "Saleem",
+     siteUrl: 'https://mdsaleemj.github.io/blog/',
      description : "Blog to pen down my thoughts about development etc.."
     },
-    pathPrefix : '/blogger',
+    pathPrefix : '/blog',
     plugins : [
         {
             resolve : `gatsby-source-filesystem`,
