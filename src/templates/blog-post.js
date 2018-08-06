@@ -28,16 +28,17 @@ export default ({data,pathContext}) => {
             justifyContent :'space-between',
             listStyle : 'none',
             padding : 0
-         }}>
-            <li>
-             {
-              next && <Link to={next.fields.slug} rel="next">
-                           {next.frontmatter.title} → </Link> 
-            }</li>
+         }}>           
 
              <li>
             { prev &&  <Link to={prev.fields.slug} rel="prev">
                        ← {prev.frontmatter.title}</Link>
+            }</li>
+
+            <li>
+             {
+              next && <Link to={next.fields.slug} rel="next">
+                           {next.frontmatter.title} → </Link> 
             }</li>
         </ul>
         </div>

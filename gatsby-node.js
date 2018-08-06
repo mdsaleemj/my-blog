@@ -45,9 +45,9 @@ exports.createPages = function({graphql,boundActionCreators}){
                       // Create blog posts pages.
                  const postAll = result.data.allMarkdownRemark.edges;
                  postAll.forEach(function(post,index){
-										const next  = index === postAll.length - 1 ? null : postAll[index + 1].node;
-										const prev  = index === 0 ? null : postAll[index -1].node ;
-										
+										const prev  = index === postAll.length - 1 ? null : postAll[index + 1].node;
+										const next  = index === 0 ? null : postAll[index -1].node ;
+										//chcck the above logic of prev and next
 										createPage({
 											path : post.node.fields.slug,
 											component : blogPost,
